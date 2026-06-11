@@ -19,20 +19,13 @@ nav {
   background: #09172d;
   position: sticky;
   top: 0;
-  flex-wrap: wrap;
 }
 
-/* OLD NAV LIST (kept safe in case you still use it) */
+/* REMOVE OLD NAV UL LAYOUT COMPLETELY (important fix) */
 nav ul {
-  display: flex;
-  gap: 25px;
   list-style: none;
-  flex-wrap: wrap;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
+  margin: 0;
+  padding: 0;
 }
 
 /* ===== 3 DOT MENU ===== */
@@ -42,25 +35,24 @@ nav a {
 }
 
 .dots {
-  font-size: 28px;
+  font-size: 30px;
   cursor: pointer;
   color: white;
-  padding: 5px 10px;
+  user-select: none;
 }
 
 /* dropdown menu */
 #menu {
   position: absolute;
   right: 0;
-  top: 40px;
+  top: 45px;
   background: #11203b;
   list-style: none;
   padding: 10px;
   border-radius: 10px;
   display: none;
   flex-direction: column;
-  gap: 10px;
-  min-width: 160px;
+  min-width: 170px;
   z-index: 1000;
 }
 
@@ -164,7 +156,6 @@ h2 {
   background: #11203b;
   padding: 20px;
   border-radius: 15px;
-  margin-bottom: 20px;
   flex: 1 1 250px;
 }
 
@@ -173,9 +164,6 @@ h2 {
 
   nav {
     padding: 15px 20px;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
   }
 
   .hero {
