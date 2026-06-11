@@ -29,19 +29,17 @@ nav ul {
 }
 
 /* ===== 3 DOT MENU ===== */
-
 .menu-container {
   position: relative;
 }
 
 .dots {
-  font-size: 30px;
+  font-size: 32px;
   cursor: pointer;
   color: white;
   user-select: none;
 }
 
-/* dropdown menu */
 #menu {
   position: absolute;
   right: 0;
@@ -50,18 +48,19 @@ nav ul {
   list-style: none;
   padding: 10px;
   border-radius: 10px;
+
   display: none;
   flex-direction: column;
   min-width: 170px;
-  z-index: 1000;
+
+  z-index: 9999; /* IMPORTANT FIX */
 }
 
 #menu li a {
   color: white;
   text-decoration: none;
   display: block;
-  padding: 8px;
-  border-radius: 6px;
+  padding: 10px;
 }
 
 #menu li a:hover {
