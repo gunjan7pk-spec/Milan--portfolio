@@ -34,14 +34,15 @@ nav a {
   text-decoration: none;
 }
 
-/* HERO SECTION */
+/* HERO */
 .hero {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   min-height: 100vh;
   padding: 50px;
   flex-wrap: wrap;
+  gap: 40px;
 }
 
 .hero-text {
@@ -57,13 +58,25 @@ nav a {
   margin: 15px 0;
 }
 
+/* IMAGE CONTAINER FIX */
+.hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+/* IMAGE FIX */
 .hero-image img {
   width: 350px;
   max-width: 100%;
+  height: auto;
   border-radius: 25px;
   border: 3px solid #4d8cff;
+  object-fit: cover;
 }
 
+/* BUTTONS */
 .buttons {
   margin-top: 20px;
 }
@@ -110,10 +123,7 @@ h2 {
   flex: 1 1 250px;
 }
 
-/* ========================= */
-/* MOBILE RESPONSIVE DESIGN */
-/* ========================= */
-
+/* MOBILE FIX */
 @media (max-width: 768px) {
 
   nav {
@@ -132,15 +142,19 @@ h2 {
     flex-direction: column;
     text-align: center;
     padding: 30px 20px;
+    gap: 20px;
   }
 
   .hero-text h1 {
     font-size: 35px;
   }
 
+  .hero-image {
+    order: -1;
+  }
+
   .hero-image img {
-    width: 250px;
-    margin-top: 20px;
+    width: 220px;
   }
 
   section {
